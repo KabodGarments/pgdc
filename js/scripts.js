@@ -44,3 +44,18 @@ $(document).ready(function(){
 $(document).ready(function () {
   var playerOne = new Player(name);
   var playerTwo = new Player(name);
+
+  $("#twoPlayerMode").click(function (event) {
+    event.preventDefault();
+    $(".rules-container").hide();
+    $(".two-player-mode").show();
+    $(".one-player-mode").hide();
+    $("#rules-button").show();
+    $("#returnToHome").show();
+    var playerOneName = $("#playerOne").val()
+    $("#playerOneName").text(playerOneName);
+    var playerTwoName = $("#playerTwo").val()
+    $("#playerTwoName").text(playerTwoName);
+    $(".mode-choice").hide();
+    $(".p1p2names").hide();
+  });
