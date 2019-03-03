@@ -25,7 +25,7 @@ Pig is one of a family of dice games described by Reiner Knizia as "jeopardy dic
 
 _For example, the first player, Anne, begins a turn with a roll of 5. Anne could hold and score 5 points, but chooses to roll again. Anne rolls a 2, and could hold with a turn total of 7 points, but chooses to roll again. Anne rolls a 1, and must end her turn without scoring. The next player, Bob, rolls the sequence 4-5-3-5-5, after which he chooses to hold, and adds his turn total of 22 points to his score._
 
-##Gameplay
+###Gameplay
 
 Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold":
 
