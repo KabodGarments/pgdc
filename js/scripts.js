@@ -7,6 +7,12 @@ function Player(name, roll, diceOne, diceTwo) {
   this.diceTwo = diceTwo;
 }
 
+Player.prototype.checkScore = function () {
+  if (this.playerOverallScore >= 100)
+     M.toast({html: '100 POINTS! WINNER!!'})
+}
+
+
 Player.prototype.bankScore = function () {
   this.playerOverallScore += this.playerTurnScore;
 }
@@ -32,10 +38,6 @@ Player.prototype.rollDice = function () {
   }
 }
 
-Player.prototype.checkScore = function () {
-  if (this.playerOverallScore >= 100)
-     M.toast({html: '100 POINTS! WINNER!!'})
-}
 
 $(document).ready(function(){
   $('.collapsible').collapsible();
