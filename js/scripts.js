@@ -59,3 +59,47 @@ $(document).ready(function () {
     $(".mode-choice").hide();
     $(".p1p2names").hide();
   });
+
+
+    // Player One Roll Button
+    $("#playerOneButton").click(function (event) {
+      event.preventDefault();
+      playerOne.rollDice()
+      // var playerOneName = $("#playerOne").val()
+      // $("#playerOneName").text(playerOneName);
+      $("#playerOneRoll").text("You rolled a " + playerOne.diceOne + " and " + playerOne.diceTwo);
+      $("#playerOneTotal").text(playerOne.playerTurnScore);
+      $("#playerOneOverallTotal").text(playerOne.playerOverallScore);
+    });
+
+    // Player One Hold Button
+    $("#playerOneHold").click(function (event) {
+      event.preventDefault();
+      playerOne.bankScore();
+      $("#playerOneOverallTotal").text(playerOne.playerOverallScore);
+      playerOne.playerTurnScore = 0;
+      $("#playerOneTotal").text("Saved");
+      playerOne.checkScore();
+    });
+
+    // Player Two Roll Button
+    $("#playerTwoButton").click(function (event) {
+      event.preventDefault();
+      playerTwo.rollDice()
+      // var playerTwoName = $("#playerTwo").val()
+      // $("#playerTwoName").text(playerTwoName);
+      $("#playerTwoRoll").text("You rolled a " + playerTwo.diceOne + " and " + playerTwo.diceTwo)
+      $("#playerTwoTotal").text(playerTwo.playerTurnScore);
+      $("#playerTwoOverallTotal").text(playerTwo.playerOverallScore);
+    });
+
+    // Player Two Hold Button
+    $("#playerTwoHold").click(function (event) {
+      event.preventDefault();
+      playerTwo.bankScore();
+      $("#playerTwoOverallTotal").text(playerTwo.playerOverallScore);
+      playerTwo.playerTurnScore = 0;
+      $("#playerTwoTotal").text("Saved");
+      playerTwo.checkScore();
+    });
+  });
