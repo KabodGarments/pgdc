@@ -36,3 +36,11 @@ Player.prototype.checkScore = function () {
   if (this.playerOverallScore >= 100)
      M.toast({html: '100 POINTS! WINNER!!'})
 }
+
+$(document).ready(function(){
+  $('.collapsible').collapsible();
+});
+
+$(document).ready(function () {
+  var playerOne = new Player(name);
+  var playerTwo = new Player(name);
