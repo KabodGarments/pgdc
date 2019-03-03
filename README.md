@@ -39,7 +39,6 @@ Each turn, a player repeatedly rolls a die until either a 1 is rolled or the pla
 
 The first player to score 100 or more points wins.
 
-
 ## Technologies Used
 
 _The  Business logic uses Javasript, jQuery, while the user interphase uses CSS and Bootstrap. All these tools are layed out on a basic HTML5 Skeleton_
