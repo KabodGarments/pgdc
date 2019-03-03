@@ -31,3 +31,8 @@ Player.prototype.rollDice = function () {
     this.playerTurnScore += this.playerRoll;
   }
 }
+
+Player.prototype.checkScore = function () {
+  if (this.playerOverallScore >= 100)
+     M.toast({html: '100 POINTS! WINNER!!'})
+}
