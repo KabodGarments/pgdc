@@ -6,6 +6,7 @@ function Player(name, roll, diceOne, diceTwo) {
   this.diceOne = diceOne;
   this.diceTwo = diceTwo;
 }
+//preferred to us M.toast for alerts by adding an onclick event to a button instead of the usual alert.//
 
 Player.prototype.checkScore = function () {
   if (this.playerOverallScore >= 100)
@@ -16,6 +17,7 @@ Player.prototype.checkScore = function () {
 Player.prototype.bankScore = function () {
   this.playerOverallScore += this.playerTurnScore;
 }
+//Math.floor for rounding of integers and Math.random to return a floating-point pseudo-random number between range [0,1)//
 
 Player.prototype.rollDice = function () {
   this.diceOne = Math.floor((Math.random() * 6) + 1)
